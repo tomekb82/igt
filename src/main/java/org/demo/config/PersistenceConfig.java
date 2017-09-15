@@ -25,8 +25,8 @@ public class PersistenceConfig {
         return new JdbcTemplate(dataSource());
     }
 
-    @Bean
     @Profile(value = "PROD")
+    @Bean
     public DataSource dataSource() {
         EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
         EmbeddedDatabase db = builder.setType(EmbeddedDatabaseType.HSQL).addScript("db/sql/data.sql").build();
