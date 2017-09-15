@@ -1,9 +1,10 @@
+org/demo/dao/StudentDao.class
 org/demo/config/PersistenceConfig.class
+org/demo/entity/QStudent.class
 org/demo/dao/StudentRepository.class
 org/demo/exception/MyResourceNotFoundException.class
 org/demo/dto/StudentDTO.class
 org/demo/service/StudentService.class
-org/demo/service/StudentServiceImpl.class
 org/demo/entity/Student.class
 org/demo/config/SwaggerConfig.class
 org/demo/utils/DozerBeanMapperImpl.class

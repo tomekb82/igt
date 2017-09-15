@@ -1,8 +1,10 @@
 # igt
 
-Sample web-app using following technologies: 
+## Sample web-app using following technologies: 
+
 - anugularjs v.1.5.6, 
-- spring (Spring-Boot): REST, JPA data, annotation configuration
+- spring (Spring-Boot): REST, annotation configuration
+- DB: JPA data, Hibernate, QueryDSL
 
 ## Utilites used:
 
@@ -11,9 +13,11 @@ Sample web-app using following technologies:
 - Lombok
 
 ## JDK
+
 - Java 8
 
 ## Testing
+
 - JUnit
 - Spock tests 
 
@@ -25,7 +29,5 @@ Sample web-app using following technologies:
 
 ## In future: 
 
-adding:
-- QueryDSL, 
 - more angularjs components and unit tests
 - etc....
