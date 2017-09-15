@@ -1,9 +1,6 @@
 package org.demo.rest;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.*;
 import org.demo.dto.StudentDTO;
 import org.demo.entity.Student;
 import org.demo.exception.MyResourceNotFoundException;
@@ -24,12 +21,13 @@ public class StudentDirectoryRestController {
     private StudentService service;
 
     @ApiOperation(value = "Get students", nickname = "Get students (paging)")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "page", value = "Page number", required = true, dataType = "int", paramType = "request"),
-            @ApiImplicitParam(name = "size", value = "Number of elements", required = true, dataType = "int", paramType = "request")
-    })
+    /*@ApiImplicitParams({
+            @ApiImplicitParam(name = "page", value = "Page number", required = true, dataType = "int", paramType = "path"),
+            @ApiImplicitParam(name = "size", value = "Number of elements", required = true, dataType = "int", paramType = "path")
+    })*/
     @RequestMapping(value = "/get", params = { "page", "size" }, method = RequestMethod.GET, produces = "application/json")
-    public Page<StudentDTO> findPaginated(@RequestParam("page") int page, @RequestParam("size") int size) {
+    public Page<StudentDTO> findPaginated(@ApiParam(name = "page", value = "Page number", defaultValue = "0")@RequestParam("page") int page,
+                                          @ApiParam(name = "size", value = "Number of elements", defaultValue = "5")@RequestParam("size") int size) {
 
         Page<StudentDTO> resultPage = service.findPaginated(page, size);
         if (page > resultPage.getTotalPages()) {
