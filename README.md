@@ -13,6 +13,10 @@ Sample web-app using following technologies:
 ## JDK
 - Java 8
 
+## Testing
+- JUnit
+- Spock tests 
+
 ## Build and run
 
 - maven:
@@ -23,6 +27,5 @@ Sample web-app using following technologies:
 
 adding:
 - QueryDSL, 
-- Spock tests 
 - more angularjs components and unit tests
 - etc....
