@@ -9,13 +9,14 @@ console.log('test');
 	 sort: null
    };
 
+   this.name = "List of students";
    /*StudentService.getStudents(paginationOptions.pageNumber,
 		   paginationOptions.pageSize).success(function(data){
 	  $scope.gridOptions.data = data.content;
  	  $scope.gridOptions.totalItems = data.totalElements;
    });*/
 
-    StudentService.getStudentsMock().then(function(data){
+   StudentService.getStudentsMock().then(function(data){
 	  $scope.gridOptions.data = data.content;
  	  $scope.gridOptions.totalItems = data.totalElements;
    });
@@ -89,5 +90,7 @@ app.service('StudentService',['$http', '$q', function ($http,$q) {
     };
 	
 }]);
+
+export default app;
 
 
